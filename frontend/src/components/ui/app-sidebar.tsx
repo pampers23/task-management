@@ -7,19 +7,22 @@ import {
   FolderOpen,
   Command,
   GalleryVerticalEnd,
+  Mails
 } from "lucide-react"
 import { MdSpaceDashboard } from "react-icons/md";
 import { FaTimeline } from "react-icons/fa6";
 import { RiSettings3Fill } from "react-icons/ri";
 import { NavMain } from "./nav-main"
 import { NavUser } from "./nav-user"
-import { TeamSwitcher } from "./team-switcher"
+import { Separator } from "@/components/ui/separator"
+// import { TeamSwitcher } from "./team-switcher"
 import {
   Sidebar,
   SidebarContent,
   SidebarFooter,
   SidebarHeader,
 } from "@/components/ui/sidebar"
+// import Logo from "./logo";
 
 // This is sample data.
 const data = {
@@ -62,10 +65,15 @@ const data = {
       url: "/tasks",
       icon: BookOpenCheck,
     },
-        {
+    {
       title: "Files",
       url: "/files",
       icon: FolderOpen,
+    },
+    {
+      title: "Messages",
+      url: "/messages",
+      icon: Mails,
     },
     {
       title: "Settings",
@@ -79,8 +87,10 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
     <Sidebar collapsible="icon" {...props}>
       <SidebarHeader>
-        <TeamSwitcher teams={data.teams} />
+        {/* <TeamSwitcher teams={data.teams} /> */}
+        {/* <Logo /> */}
       </SidebarHeader>
+      <Separator />
       <SidebarContent>
         <NavMain items={data.navMain} />
       </SidebarContent>
