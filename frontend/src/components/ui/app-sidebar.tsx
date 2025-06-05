@@ -22,7 +22,7 @@ import {
   SidebarFooter,
   SidebarHeader,
 } from "@/components/ui/sidebar"
-// import Logo from "./logo";
+import Logo from "./logo";
 
 // This is sample data.
 const data = {
@@ -88,7 +88,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
     <Sidebar collapsible="icon" {...props}>
       <SidebarHeader>
         {/* <TeamSwitcher teams={data.teams} /> */}
-        {/* <Logo /> */}
+        <Logo />
       </SidebarHeader>
       <Separator />
       <SidebarContent>
