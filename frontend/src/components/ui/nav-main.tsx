@@ -1,7 +1,7 @@
 "use client"
 
 import { type LucideIcon } from "lucide-react"
-import type { ElementType } from 'react';
+
 import {
   Collapsible,
   CollapsibleTrigger,
@@ -20,13 +20,13 @@ export function NavMain({
   items: {
     title: string
     url: string
-    icon?: LucideIcon | ElementType;
+    icon?: LucideIcon | React.ElementType
     isActive?: boolean
   }[]
 }) {
   return (
     <SidebarGroup>
-      <SidebarGroupLabel></SidebarGroupLabel>
+      <SidebarGroupLabel>Platform</SidebarGroupLabel>
       <SidebarMenu>
         {items.map((item) => (
           <Collapsible
